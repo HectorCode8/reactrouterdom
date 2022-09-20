@@ -4,6 +4,12 @@ import { HomePage } from "./HomePage";
 import { BlogPage } from "./BlogPage";
 import { ProfilePage } from "./ProfilePage";
 
+// /#/ -> Home
+// /#/blog
+// /#/profile
+// /#/lalalala -> Not Found
+// /blog, /lalala -> Home
+
 function App() {
   return (
     <>
@@ -14,7 +20,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/profile" element={<ProfilePage />} />
-          <Route path="*" element={<p>Not Found</p>} />
+          <Route path="*" element={<p>Not found</p>} />
         </Routes>
       </HashRouter>
     </>
