@@ -1,15 +1,15 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 function Menu() {
   return (
     <nav>
       <ul>
-        {routes.map(route => (
+        {routes.map((route) => (
           <li>
             <NavLink
               style={({ isActive }) => ({
-                color: isActive ? 'red' : 'blue',
+                color: isActive ? "red" : "blue",
               })}
               to={route.to}
               end
@@ -25,16 +25,16 @@ function Menu() {
 
 const routes = [];
 routes.push({
-  to: '/',
-  text: 'Home',
+  to: "/",
+  text: "Home",
 });
 routes.push({
-  to: '/blog',
-  text: 'Blog',
+  to: "/blog",
+  text: "Blog",
 });
 routes.push({
-  to: '/profile',
-  text: 'Profile',
+  to: "/profile",
+  text: "Profile",
 });
 
 export { Menu };
