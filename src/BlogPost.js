@@ -1,14 +1,20 @@
 import React from "react";
-import {  useParams } from "react-router-dom";
-import { blogdata } from './blogData.js'
+import { useParams, useNavigate } from "react-router-dom";
+import { blogdata } from "./blogData.js";
 
 function BlogPost() {
-    const { slug } = useParams();
+  const navigate =  useNavigate();
+  const { slug } = useParams();
 
-    const blogpost = blogdata.find(post => post.slug === slug)
-    return (
+  const blogpost = blogdata.find((post) => post.slug === slug);
+  const returnToBlog = () => {
+    navigate('/blog');
+  };
+
+  return (
     <>
       <h2>{blogpost.title}</h2>
+      <button onClick={returnToBlog}>Regresar</button>
       <p>{blogpost.content}</p>
       <p>{blogpost.author}</p>
     </>

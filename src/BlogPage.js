@@ -1,16 +1,15 @@
 import React from "react";
-import { Link } from 'react-router-dom';
-import { blogdata } from './blogData.js'
-
+import { Link } from "react-router-dom";
+import { blogdata } from "./blogData.js";
 
 function BlogPage() {
   return (
     <>
       <h1>BlogPage</h1>
       <ul>
-      {blogdata.map(post => (
-        <BlogLink post={post} />
-      ))}
+        {blogdata.map((post) => (
+          <BlogLink key={post.slug} post={post} />
+        ))}
       </ul>
     </>
   );
@@ -23,6 +22,5 @@ function BlogLink({ post }) {
     </li>
   );
 }
-
 
 export { BlogPage };
