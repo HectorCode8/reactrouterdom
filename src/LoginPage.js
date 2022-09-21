@@ -15,16 +15,11 @@ function LoginPage() {
       <form onSubmit={login}>
         <label>
           Username:
-          <input type="text" name="username" />
-        </label>
-        <label>
-          Password:
           <input
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            type="password"
-            name="password"
-          />
+          value={username}
+          onChange={(e) => setUsername(e.target.value)} 
+          type="text" 
+          name="username" />
         </label>
         <button type="submit"> Login </button>
       </form>
