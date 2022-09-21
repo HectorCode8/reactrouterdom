@@ -5,7 +5,7 @@ import { blogdata } from "./blogData.js";
 function BlogPage() {
   return (
     <>
-      <h1>BlogPage</h1>
+      <h1>Blog</h1>
       <Outlet />
       <ul>
         {blogdata.map((post) => (
