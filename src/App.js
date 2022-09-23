@@ -22,14 +22,9 @@ function App() {
               <Route path=":slug" element={<BlogPost />} />
             </Route>
 
-            <Route
-              path="/login"
-              element={
-                <AuthRoute>
-                  <LoginPage />
-                </AuthRoute>
-              }
-            />
+            <Route 
+              path="/login" 
+              element={<LoginPage />} />
 
             <Route
               path="/logout"
