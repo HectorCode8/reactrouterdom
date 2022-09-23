@@ -22,8 +22,23 @@ function App() {
               <Route path=":slug" element={<BlogPost />} />
             </Route>
 
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/logout" element={<LogOutPage />} />
+            <Route
+              path="/login"
+              element={
+                <AuthRoute>
+                  <LoginPage />
+                </AuthRoute>
+              }
+            />
+
+            <Route
+              path="/logout"
+              element={
+                <AuthRoute>
+                  <LogOutPage />
+                </AuthRoute>
+              }
+            />
 
             <Route
               path="/profile"
